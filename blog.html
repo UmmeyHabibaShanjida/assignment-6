@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<header>
+    <!-- Discuss the scope of var, let and const -->
+    <h1 class="text-6xl text-center mt-10 font-bold text-red-900">var vs let vs const In JavaScript</h1>
+    <h4 class="text-3xl font font-normal mt-20 ml-8"><span class="font-semibold">I</span>n JavaScript, there are three
+        ways to declare variables: var, let, and const. Each of these keywords has its own rules and uses, and it is
+        important to understand the differences between them in order to write effective and maintainable code.</h4>
+</header>
+<main>
+    <h2 class="text-6xl ml-8 mt-10 text-center text-red-700 font-medium">var</h2>
+    <p class="text-3xl font-normal ml-8 mt-5">The "var" keyword is used to declare variables in JavaScript. It was
+        introduced in the early days of the language and was the only way to declare variables for a long time. However,
+        the "var" keyword has some limitations and has been largely replaced by the "let" and "const" keywords in modern
+        JavaScript.
+
+        One of the main issues with "var" is that it is function-scoped, rather than block-scoped. This means that
+        variables declared with "var" are accessible within the entire function in which they are declared, rather than
+        just within the block of code in which they appear. This can lead to unexpected behavior and can make it
+        difficult to reason about the scope of variables in your code.</p>
+    <h2 class="text-6xl ml-8 mt-10 text-center text-red-700 font-medium">let</h2>
+    <p class="text-3xl font-normal ml-8 mt-5">The "let" keyword was introduced in ECMAScript 6 (also known as ES6) and
+        is used to declare variables that can be reassigned later. "let" variables are block-scoped, which means that
+        they are only accessible within the block of code in which they are declared. This makes them more predictable
+        and easier to reason about than "var" variables. <br>
+
+        For example:
+        <span class="bg-gray-200">
+            <br>if (x > 10) {<br>
+            let y = 20;<br>
+            console.log(y); // 20 <br>
+            } <br>
+            console.log(y); // ReferenceError: y is not defined
+    </p>
+    </span>
+    <p class="text-3xl font-normal ml-8 mt-5">
+        In this example, the "y" variable is declared with the "let" keyword and is only accessible within the block of
+        the if statement. If you try to access it outside of the block, you will get a "ReferenceError" because "y" is
+        not defined in that scope.</p>
+
+    <h2 class="text-6xl ml-8 mt-10 text-center text-red-700 font-medium">const</h2>
+    <p class="text-3xl font-normal ml-8 mt-5">The "const" keyword was also introduced in ES6 and is used to declare
+        variables that cannot be reassigned later. "const" variables are also block-scoped and behave similarly to "let"
+        variables in that respect. However, the main difference is that "const" variables must be initialized with a
+        value when they are declared and cannot be reassigned later. <br>
+
+        For example:
+        <span class="bg-gray-200">
+            const PI = 3.14; <br>
+            PI = 3.14159; // TypeError: Assignment to constant variable.
+        </span>
+    </p>
+    <p class="text-3xl font-normal ml-8 mt-5">n this example, the "PI" variable is declared with the "const" keyword and
+        is assigned the value of 3.14. If you try to reassign a new value to "PI," you will get a "TypeError" because
+        "PI" is a constant variable and cannot be changed.</p>
+    <h2 class="text-6xl ml-8 mt-10 text-center text-red-950 font-medium">Conclusion</h2>
+    <p class="text-3xl font-normal ml-8 mt-5">In summary, "var" is an old way of declaring variables that is
+        function-scoped and can be reassigned. "let" is a newer way of declaring variables that is block-scoped and can
+        be reassigned. "const" is a newer way of declaring variables that is block-scoped and cannot be reassigned. In
+        modern JavaScript, it is generally recommended to use "let" and "const" instead of "var," as they provide better
+        scoping and make it easier to write maintainable code.
+
+    </p>
+
+    <!-- Tell us the use cases of null and undefined -->
+
+    <h1 class="text-6xl text-center mt-10 font-bold text-red-900">Difference Between Null and Undefined in JavaScript
+    </h1>
+    <h2 class="text-6xl ml-8 mt-10 text-center text-red-700 font-medium">Defining Null</h2>
+    <p class="text-3xl font-normal ml-8 mt-5">In JavaScript, null is a special value that represents the absence of an
+        object. It is often used to indicate that a variable does not have a value or that an object does not exist.
+        Null is not the same as an empty string or a zero value, as those values are still considered to have a value.
+        Instead, null represents the absence of a value or object.
+
+    </p>
+    <h2 class="text-6xl ml-8 mt-10 text-center text-red-700 font-medium">Defining Undefined</h2>
+    <p class="text-3xl font-normal ml-8 mt-5">In JavaScript, undefined is a special value that is assigned to a variable
+        by default when the variable is declared but no value is explicitly assigned to it. It is often used to check if
+        a variable has been assigned a value or not.
+
+    </p>
+    <h5 class="text-4xl font-semibold ml-8 mt-5">The main difference between null and undefined is that undefined
+        dictates that a variable has been declared, but has not yet been assigned a value. Null on the other hand is a
+        value that can be assigned to a variable.</h5>
+
+    <h6 class="text-2xl ml-8 mt-5">For example, consider the following code</h6>
+    <p class="text-3xl font-normal ml-8 mt-5 bg-gray-200">let name; <br>
+        console.log(name); // Output: undefined <br>
+
+        name = null; <br>
+        console.log(name); // Output: null</p>
+    <p class="text-3xl font-normal ml-8 mt-5"><span class="font-semibold">I</span>n the code above, we first declare a
+        variable called name without assigning it a value. Since no value is assigned to the name variable, it is
+        automatically assigned the value undefined. When we try to print the value of name, it outputs undefined.</p>
+    <p class="text-3xl font-normal ml-8 mt-5">Next, we assign the value null to the name variable and try to print its
+        value again. This time, it outputs null, indicating that the name variable now has a value of null.</p>
+
+    <!-- what do you mean by Rest API -->
+
+    <h1 class="text-6xl text-center mt-10 font-bold text-red-900">Rest API</h1>
+    <h2 class="text-6xl ml-8 mt-10 text-center text-red-700 font-medium">Introduction
+    </h2>
+    <p class="text-3xl font-normal ml-8 mt-5"><span class="font-semibold">REST API</span> is the standard way to send
+        and receive data for web services.
+        <br>
+        A client sends a req which first goes to the rest API and then to the database to get or put the data after
+        that, it will again go to the rest API and then to the client. Using an API is just like using a website in a
+        browser, but instead of clicking on buttons, we write code to req data from the server. It's incredibly
+        adaptable and can handle multiple types of requests.
+    </p>
+    <h2 class="text-6xl ml-8 mt-10 text-center font-light">REST API</h2>
+    <p class="text-3xl font-normal ml-8 mt-5">REST <span class="font-semibold">(Representational state transfer)</span>
+        is a popular architecture that is used to create web services.
+    </p>
+    <p class="text-3xl font-normal ml-8 mt-5"> API <span class="font-semibold">(Application Programming
+            Interface)</span> is a code that allows two software programs to communicate with each other.
+    </p>
+    <p class="text-3xl font-normal ml-8 mt-5"> <span class="font-semibold">REST API</span> is a software that allows two
+        apps to communicate with one another over the internet and through numerous devices.
+
+    </p>
+    <h3 class="text-3xl font-semibold ml-8 mt-5">API Using Express and Its Architecture:
+    </h3>
+    <p class="text-3xl font-normal ml-8 mt-5">A request is sent by the client in the form of a JSON file, and with the
+        help of an HTTP request which gets a patch post and delete, it will go to the server first then, the server
+        sends back the response to the client in the form of a message to tell what happened to your request.
+
+    </p>
+</main>
+<footer>
+
+</footer>
+
+<body>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

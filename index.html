@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Hero</title>
+    <!-- daisy UI and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.0.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="bg-white">
+        <nav class="w-auto mb-7 pt-11">
+            <div class="flex justify-around">
+                <img class="h-10" src="logo.png" alt="">
+                <div>
+                    <button id="sort-view" onclick="sortView()" class=" btn bg-gray-200 border-none text-gray-500 text-xl block">Sort by view</button>
+                </div>
+                <div id="btn-blog">
+                    <button onclick="blogButton()" class="btn text-white bg-red-600 border-none">Blog</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <div class="flex justify-center" id="buttons-container">
+            </div>
+        </section>
+        <section class="container mx-auto mt-12">
+            <div id="videos-card-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
